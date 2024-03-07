@@ -13,3 +13,10 @@ $ deno run --allow-read --allow-write build.ts ./assets/shapes/TARGET_DIRECTORY
 
 - Directory structure is reflected to UI as it is.
 - The script generates unique id for each icon. Those ids change every time it runs.
+
+## Useful commands
+
+Delete all files but `*.svg`
+```
+find ./assets/shapes/NAME -type f ! -name '*.svg' -exec rm -rf {} \;
+```

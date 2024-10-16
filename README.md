@@ -1,5 +1,21 @@
 # No-man's folly assets
 
+## External assets
+Some assets in this repository are from thrid parties and they are not under the license of No-man's folly project.
+
+### AWS
+Icon files in `assets/shapes/aws` are from:
+https://aws.amazon.com/architecture/icons/
+
+### Cisco
+Icon files in `assets/shapes/cisco` are from:
+https://www.cisco.com/c/en/us/about/brand-center/network-topology-icons.html
+
+### Google Cloud
+Icon files in `assets/shapes/gcp` are from:
+https://cloud.google.com/icons
+
+
 ## Setup
 Install Deno: https://docs.deno.com/runtime/manual
 

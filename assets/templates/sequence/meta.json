@@ -1,0 +1,13 @@
+{
+  "0_1_two_nodes.folly.svg": ["sequence", "basic", "two", "nodes", "actors", "interaction"],
+  "0_2_three_nodes.folly.svg": ["sequence", "basic", "three", "nodes", "actors", "interaction"],
+  "0_3_three_nodes_callback.folly.svg": ["sequence", "three", "nodes", "callback", "return", "actors"],
+  "1-1_object_2.folly.svg": ["sequence", "object", "two", "lifeline", "message"],
+  "1-2_object_3.folly.svg": ["sequence", "object", "three", "lifeline", "message"],
+  "1-3_object_delete.folly.svg": ["sequence", "object", "delete", "destroy", "lifeline"],
+  "2-1_task_request_response.folly.svg": ["sequence", "task", "request", "response", "http", "api"],
+  "2-2_task_callback_return.folly.svg": ["sequence", "task", "callback", "return", "async"],
+  "2-3_task_recursive.folly.svg": ["sequence", "task", "recursive", "self", "loop"],
+  "3-1_option_alternative.folly.svg": ["sequence", "option", "alternative", "alt", "condition", "if", "else"],
+  "3-2_option_loop.folly.svg": ["sequence", "option", "loop", "repeat", "iteration"]
+}

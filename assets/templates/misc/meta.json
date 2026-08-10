@@ -1,0 +1,15 @@
+{
+  "class_entities.folly.svg": ["class", "entity", "uml", "object", "attribute", "field"],
+  "class_relations.folly.svg": ["class", "relation", "uml", "inheritance", "association", "dependency"],
+  "shapes_01_text-containers.folly.svg": ["shape", "text", "container", "label", "box"],
+  "shapes_02_plains.folly.svg": ["shape", "plain", "basic", "rectangle", "circle", "polygon"],
+  "shapes_03_ribbons.folly.svg": ["shape", "ribbon", "banner", "decoration"],
+  "shapes_04_brackets.svg": ["shape", "bracket", "brace", "grouping"],
+  "shapes_05_tetriminos.folly.svg": ["shape", "tetrimino", "tetris", "block", "puzzle"],
+  "shapes_10_polygons_convex_fulfilled.svg": ["shape", "polygon", "convex", "filled", "geometry"],
+  "shapes_11_polygons_concave_fulfilled.svg": ["shape", "polygon", "concave", "filled", "geometry", "star"],
+  "shapes_12_polygons_convex_regular.svg": ["shape", "polygon", "convex", "regular", "outline", "geometry"],
+  "shapes_13_polygons_concave_regular.svg": ["shape", "polygon", "concave", "regular", "outline", "geometry", "star"],
+  "clip_01.folly.svg": ["clipping", "clip", "mask", "crop"],
+  "clip_02_crop-outside-border.folly.svg": ["clipping", "clip", "crop", "outside", "border", "mask"]
+}

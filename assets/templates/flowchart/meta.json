@@ -1,0 +1,6 @@
+{
+  "1-1_symbols.folly.svg": ["symbol", "basic", "flowchart", "start", "end", "process", "decision", "shape"],
+  "1-2_symbols.folly.svg": ["symbol", "extended", "flowchart", "data", "document", "connector", "shape"],
+  "2-1_branch_vertical.folly.svg": ["branch", "vertical", "condition", "decision", "if", "else", "flow"],
+  "2-2_branch_horizontal.folly.svg": ["branch", "horizontal", "condition", "decision", "if", "else", "flow"]
+}

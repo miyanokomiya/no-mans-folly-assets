@@ -11,7 +11,38 @@ interface Result {
   [name: string]: Result | string;
 }
 
-function walkDir(dir: string, result: Result = {}) {
+function getChangedFiles(): Set<string> {
+  const cmd = new Deno.Command("git", {
+    args: ["status", "--porcelain"],
+    stdout: "piped",
+  });
+  const output = cmd.outputSync();
+  const text = new TextDecoder().decode(output.stdout);
+  const changed = new Set<string>();
+  for (const line of text.split("\n")) {
+    if (!line.trim()) continue;
+    // Format: "XY filepath" or "XY old -> new" for renames
+    const filePath = line.slice(3).trim();
+    const arrowIndex = filePath.indexOf(" -> ");
+    changed.add(arrowIndex >= 0 ? filePath.slice(arrowIndex + 4) : filePath);
+  }
+  return changed;
+}
+
+function loadExistingIndex(dir: string): Result {
+  try {
+    return JSON.parse(Deno.readTextFileSync(`${dir}/index.json`));
+  } catch {
+    return {};
+  }
+}
+
+function walkDir(
+  dir: string,
+  changedFiles: Set<string>,
+  existing: Result,
+  result: Result = {},
+) {
   const list = Deno.readDirSync(dir);
   for (const item of list) {
     const itemPath = path.join(dir, item.name);
@@ -19,24 +50,63 @@ function walkDir(dir: string, result: Result = {}) {
     if (stats.isDirectory) {
       const obj: Result = {};
       result[item.name] = obj;
-      walkDir(itemPath, obj);
+      walkDir(itemPath, changedFiles, (existing[item.name] as Result) ?? {}, obj);
     } else {
       const ext = path.extname(item.name);
       if ([".svg", ".png", ".jpg"].includes(ext.toLowerCase())) {
         const fileName = path.basename(item.name);
-        result[fileName] = `s${nanoid()}${path.extname(item.name)}`;
+        const relativePath = path.relative(Deno.cwd(), path.resolve(itemPath));
+        if (!changedFiles.has(relativePath) && typeof existing[fileName] === "string") {
+          result[fileName] = existing[fileName] as string;
+        } else {
+          result[fileName] = `s${nanoid()}${ext}`;
+        }
       }
     }
   }
   return result;
 }
 
-function testWalkDir(dir: string) {
-  const result = walkDir(dir);
+function collectLeafKeys(result: Result): Set<string> {
+  const keys = new Set<string>();
+  for (const [key, value] of Object.entries(result)) {
+    if (typeof value === "string") {
+      keys.add(key);
+    } else {
+      for (const k of collectLeafKeys(value)) keys.add(k);
+    }
+  }
+  return keys;
+}
+
+function loadExistingMeta(dir: string): Record<string, string[]> {
+  try {
+    return JSON.parse(Deno.readTextFileSync(`${dir}/meta.json`));
+  } catch {
+    return {};
+  }
+}
+
+function updateMeta(dir: string, result: Result) {
+  const existing = loadExistingMeta(dir);
+  const current = collectLeafKeys(result);
+  const updated: Record<string, string[]> = {};
+  for (const key of current) {
+    updated[key] = existing[key] ?? [];
+  }
+  Deno.writeTextFileSync(`${dir}/meta.json`, JSON.stringify(updated, null, 2));
+}
+
+function buildIndex(dir: string, noMeta = false) {
+  const changedFiles = getChangedFiles();
+  const existing = loadExistingIndex(dir);
+  const result = walkDir(dir, changedFiles, existing);
   Deno.writeTextFileSync(`${dir}/index.json`, JSON.stringify(result));
+  if (!noMeta) updateMeta(dir, result);
 }
 
 const args = Deno.args;
 const dir = args[0];
+const noMeta = args.includes("--no-meta");
 
-testWalkDir(dir);
+buildIndex(dir, noMeta);

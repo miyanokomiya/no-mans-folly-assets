@@ -1,70 +1,606 @@
 {
-  "sr.folly.svg": ["circuit", "series reactor", "reactor", "phase modifier", "impedance", "electrical"],
-  "sr_enclosed.folly.svg": ["circuit", "series reactor", "reactor", "enclosed", "phase modifier", "impedance", "electrical"],
-  "sc.folly.svg": ["circuit", "series capacitor", "capacitor", "phase modifier", "impedance", "electrical"],
-  "two_phase.folly.svg": ["circuit", "wire", "two phase", "cable", "electrical"],
-  "cable_head_1.folly.svg": ["circuit", "cable", "cable head", "termination", "electrical"],
-  "cable_head_2.folly.svg": ["circuit", "cable", "cable head", "termination", "electrical"],
-  "three_phase.folly.svg": ["circuit", "wire", "three phase", "cable", "electrical"],
-  "lightning_arrester.folly.svg": ["circuit", "lightning arrester", "surge protector", "protection", "electrical"],
-  "switch_two_way_off.folly.svg": ["circuit", "switch", "two-way", "off", "electrical", "toggle"],
-  "switch_off.folly.svg": ["circuit", "switch", "off", "electrical", "toggle"],
-  "switch_two_way_on1.folly.svg": ["circuit", "switch", "two-way", "on", "electrical", "toggle"],
-  "switch_two_way_on2.folly.svg": ["circuit", "switch", "two-way", "on", "electrical", "toggle"],
-  "whm.folly.svg": ["circuit", "relay", "watt hour meter", "energy", "measurement", "electrical"],
-  "uv.folly.svg": ["circuit", "relay", "under voltage", "protection", "voltage", "electrical"],
-  "ov.folly.svg": ["circuit", "relay", "over voltage", "protection", "voltage", "electrical"],
-  "oc.folly.svg": ["circuit", "relay", "over current", "protection", "current", "electrical"],
-  "dg.folly.svg": ["circuit", "relay", "differential ground", "protection", "ground", "differential", "electrical"],
-  "ocg.folly.svg": ["circuit", "relay", "over current ground", "protection", "current", "ground", "electrical"],
-  "ovg.folly.svg": ["circuit", "relay", "over voltage ground", "protection", "voltage", "ground", "electrical"],
-  "photodiode.folly.svg": ["circuit", "diode", "photodiode", "photo", "light", "electrical", "semiconductor"],
-  "schottky_diode.folly.svg": ["circuit", "diode", "schottky", "electrical", "semiconductor"],
-  "thyristor__scr_.folly.svg": ["circuit", "thyristor", "scr", "silicon controlled rectifier", "electrical", "semiconductor"],
-  "diode.folly.svg": ["circuit", "diode", "basic", "electrical", "semiconductor", "rectifier"],
-  "varactor_diode.folly.svg": ["circuit", "diode", "varactor", "variable capacitance", "electrical", "semiconductor"],
-  "zener_diode2.folly.svg": ["circuit", "diode", "zener", "voltage regulation", "electrical", "semiconductor"],
-  "zener_diode1.folly.svg": ["circuit", "diode", "zener", "voltage regulation", "electrical", "semiconductor"],
-  "crd.folly.svg": ["circuit", "diode", "crd", "constant current diode", "current regulative diode", "electrical", "semiconductor"],
-  "light_emitting_diode__led_.folly.svg": ["circuit", "diode", "led", "light emitting", "light", "electrical", "semiconductor"],
-  "step_recovery_diode.folly.svg": ["circuit", "diode", "step recovery", "electrical", "semiconductor"],
-  "tunnel_diode2.folly.svg": ["circuit", "diode", "tunnel", "electrical", "semiconductor"],
-  "tunnel_diode1.folly.svg": ["circuit", "diode", "tunnel", "electrical", "semiconductor"],
-  "laser_diode.folly.svg": ["circuit", "diode", "laser", "light", "electrical", "semiconductor"],
-  "register.folly.svg": ["circuit", "resistor", "component", "resistance", "electrical"],
-  "transistor_pnp.folly.svg": ["circuit", "transistor", "pnp", "semiconductor", "component", "electrical"],
-  "fet_p_channel.folly.svg": ["circuit", "fet", "mosfet", "p-channel", "transistor", "semiconductor", "component", "electrical"],
-  "mortor.folly.svg": ["circuit", "motor", "component", "electrical", "load"],
-  "generator.folly.svg": ["circuit", "generator", "component", "power", "electrical", "source"],
-  "inductor.folly.svg": ["circuit", "inductor", "coil", "electromagnetic", "component", "electrical"],
-  "transistor_npn.folly.svg": ["circuit", "transistor", "npn", "semiconductor", "component", "electrical"],
-  "variable_register.folly.svg": ["circuit", "variable resistor", "potentiometer", "rheostat", "component", "electrical"],
-  "fet_n_channel.folly.svg": ["circuit", "fet", "mosfet", "n-channel", "transistor", "semiconductor", "component", "electrical"],
-  "capacitor.folly.svg": ["circuit", "capacitor", "component", "electrical"],
-  "wattmeter_3.folly.svg": ["circuit", "wattmeter", "meter", "power", "measurement", "electrical"],
-  "ammeter.folly.svg": ["circuit", "ammeter", "meter", "current", "measurement", "electrical"],
-  "wattmeter_2.folly.svg": ["circuit", "wattmeter", "meter", "power", "measurement", "electrical"],
-  "wattmeter_1.folly.svg": ["circuit", "wattmeter", "meter", "power", "measurement", "electrical"],
-  "voltmeter.folly.svg": ["circuit", "voltmeter", "meter", "voltage", "measurement", "electrical"],
-  "transforer_star_star.folly.svg": ["circuit", "transformer", "star-star", "wye-wye", "three phase", "electrical"],
-  "transforer.folly.svg": ["circuit", "transformer", "voltage", "power", "electrical"],
-  "ct.folly.svg": ["circuit", "current transformer", "ct", "measurement", "transformer", "electrical"],
-  "transforer_delta_delta.folly.svg": ["circuit", "transformer", "delta-delta", "three phase", "electrical"],
-  "transforer_star_delta.folly.svg": ["circuit", "transformer", "star-delta", "wye-delta", "three phase", "electrical"],
-  "transforer_delta_star.folly.svg": ["circuit", "transformer", "delta-star", "delta-wye", "three phase", "electrical"],
-  "fuse.folly.svg": ["circuit", "fuse", "protection", "overcurrent", "breaker", "electrical"],
-  "lbs.folly.svg": ["circuit", "load break switch", "lbs", "switch", "disconnector", "electrical"],
-  "ds_fuse.folly.svg": ["circuit", "disconnecting switch", "fuse", "ds", "protection", "electrical"],
-  "ds.folly.svg": ["circuit", "disconnecting switch", "ds", "isolator", "electrical"],
-  "circuit_breaker.folly.svg": ["circuit", "circuit breaker", "breaker", "protection", "overcurrent", "electrical"],
-  "lbs_fuse.folly.svg": ["circuit", "load break switch", "fuse", "lbs", "protection", "electrical"],
-  "earth.folly.svg": ["circuit", "earth", "ground", "electrical", "reference"],
-  "current_supply.folly.svg": ["circuit", "power supply", "current source", "electrical", "source"],
-  "three_phase_supply.folly.svg": ["circuit", "power supply", "three phase", "ac", "electrical", "source"],
-  "lamp.folly.svg": ["circuit", "lamp", "light", "bulb", "electrical", "load"],
-  "dc_supply.folly.svg": ["circuit", "power supply", "dc", "direct current", "electrical", "source"],
-  "ac_supply.folly.svg": ["circuit", "power supply", "ac", "alternating current", "electrical", "source"],
-  "cell.folly.svg": ["circuit", "cell", "battery", "power supply", "electrical", "source"],
-  "dc_motor_shunt.folly.svg": ["circuit", "dc motor", "motor", "shunt", "shunt wound", "dc machine", "component", "electrical", "load"],
-  "dc_generator_shunt.folly.svg": ["circuit", "dc generator", "generator", "shunt", "shunt wound", "dc machine", "component", "power", "electrical", "source"]
+	"induction_motor.folly.svg": [
+		"circuit",
+		"induction motor",
+		"motor",
+		"equivalent circuit",
+		"ac motor",
+		"induction machine",
+		"component",
+		"electrical",
+		"load"
+	],
+	"induction_motor_2.folly.svg": [
+		"circuit",
+		"induction motor",
+		"motor",
+		"equivalent circuit",
+		"ac motor",
+		"induction machine",
+		"component",
+		"electrical",
+		"load"
+	],
+	"induction_motor_3.folly.svg": [
+		"circuit",
+		"induction motor",
+		"motor",
+		"equivalent circuit",
+		"ac motor",
+		"induction machine",
+		"component",
+		"electrical",
+		"load"
+	],
+	"sr.folly.svg": [
+		"circuit",
+		"series reactor",
+		"reactor",
+		"phase modifier",
+		"impedance",
+		"electrical"
+	],
+	"sr_enclosed.folly.svg": [
+		"circuit",
+		"series reactor",
+		"reactor",
+		"enclosed",
+		"phase modifier",
+		"impedance",
+		"electrical"
+	],
+	"sc.folly.svg": [
+		"circuit",
+		"series capacitor",
+		"capacitor",
+		"phase modifier",
+		"impedance",
+		"electrical"
+	],
+	"cable_head_1.folly.svg": [
+		"circuit",
+		"cable",
+		"cable head",
+		"termination",
+		"electrical"
+	],
+	"three_phase.folly.svg": [
+		"circuit",
+		"wire",
+		"three phase",
+		"cable",
+		"electrical"
+	],
+	"two_phase.folly.svg": [
+		"circuit",
+		"wire",
+		"two phase",
+		"cable",
+		"electrical"
+	],
+	"cable_head_2.folly.svg": [
+		"circuit",
+		"cable",
+		"cable head",
+		"termination",
+		"electrical"
+	],
+	"lightning_arrester.folly.svg": [
+		"circuit",
+		"lightning arrester",
+		"surge protector",
+		"protection",
+		"electrical"
+	],
+	"switch_two_way_off.folly.svg": [
+		"circuit",
+		"switch",
+		"two-way",
+		"off",
+		"electrical",
+		"toggle"
+	],
+	"switch_two_way_on1.folly.svg": [
+		"circuit",
+		"switch",
+		"two-way",
+		"on",
+		"electrical",
+		"toggle"
+	],
+	"switch_off.folly.svg": [
+		"circuit",
+		"switch",
+		"off",
+		"electrical",
+		"toggle"
+	],
+	"switch_two_way_on2.folly.svg": [
+		"circuit",
+		"switch",
+		"two-way",
+		"on",
+		"electrical",
+		"toggle"
+	],
+	"uv.folly.svg": [
+		"circuit",
+		"relay",
+		"under voltage",
+		"protection",
+		"voltage",
+		"electrical"
+	],
+	"ocg.folly.svg": [
+		"circuit",
+		"relay",
+		"over current ground",
+		"protection",
+		"current",
+		"ground",
+		"electrical"
+	],
+	"whm.folly.svg": [
+		"circuit",
+		"relay",
+		"watt hour meter",
+		"energy",
+		"measurement",
+		"electrical"
+	],
+	"oc.folly.svg": [
+		"circuit",
+		"relay",
+		"over current",
+		"protection",
+		"current",
+		"electrical"
+	],
+	"ov.folly.svg": [
+		"circuit",
+		"relay",
+		"over voltage",
+		"protection",
+		"voltage",
+		"electrical"
+	],
+	"dg.folly.svg": [
+		"circuit",
+		"relay",
+		"differential ground",
+		"protection",
+		"ground",
+		"differential",
+		"electrical"
+	],
+	"ovg.folly.svg": [
+		"circuit",
+		"relay",
+		"over voltage ground",
+		"protection",
+		"voltage",
+		"ground",
+		"electrical"
+	],
+	"varactor_diode.folly.svg": [
+		"circuit",
+		"diode",
+		"varactor",
+		"variable capacitance",
+		"electrical",
+		"semiconductor"
+	],
+	"light_emitting_diode__led_.folly.svg": [
+		"circuit",
+		"diode",
+		"led",
+		"light emitting",
+		"light",
+		"electrical",
+		"semiconductor"
+	],
+	"diode.folly.svg": [
+		"circuit",
+		"diode",
+		"basic",
+		"electrical",
+		"semiconductor",
+		"rectifier"
+	],
+	"step_recovery_diode.folly.svg": [
+		"circuit",
+		"diode",
+		"step recovery",
+		"electrical",
+		"semiconductor"
+	],
+	"zener_diode2.folly.svg": [
+		"circuit",
+		"diode",
+		"zener",
+		"voltage regulation",
+		"electrical",
+		"semiconductor"
+	],
+	"tunnel_diode1.folly.svg": [
+		"circuit",
+		"diode",
+		"tunnel",
+		"electrical",
+		"semiconductor"
+	],
+	"thyristor__scr_.folly.svg": [
+		"circuit",
+		"thyristor",
+		"scr",
+		"silicon controlled rectifier",
+		"electrical",
+		"semiconductor"
+	],
+	"crd.folly.svg": [
+		"circuit",
+		"diode",
+		"crd",
+		"constant current diode",
+		"current regulative diode",
+		"electrical",
+		"semiconductor"
+	],
+	"photodiode.folly.svg": [
+		"circuit",
+		"diode",
+		"photodiode",
+		"photo",
+		"light",
+		"electrical",
+		"semiconductor"
+	],
+	"tunnel_diode2.folly.svg": [
+		"circuit",
+		"diode",
+		"tunnel",
+		"electrical",
+		"semiconductor"
+	],
+	"laser_diode.folly.svg": [
+		"circuit",
+		"diode",
+		"laser",
+		"light",
+		"electrical",
+		"semiconductor"
+	],
+	"schottky_diode.folly.svg": [
+		"circuit",
+		"diode",
+		"schottky",
+		"electrical",
+		"semiconductor"
+	],
+	"zener_diode1.folly.svg": [
+		"circuit",
+		"diode",
+		"zener",
+		"voltage regulation",
+		"electrical",
+		"semiconductor"
+	],
+	"capacitor.folly.svg": [
+		"circuit",
+		"capacitor",
+		"component",
+		"electrical"
+	],
+	"transistor_pnp.folly.svg": [
+		"circuit",
+		"transistor",
+		"pnp",
+		"semiconductor",
+		"component",
+		"electrical"
+	],
+	"fet_p_channel.folly.svg": [
+		"circuit",
+		"fet",
+		"mosfet",
+		"p-channel",
+		"transistor",
+		"semiconductor",
+		"component",
+		"electrical"
+	],
+	"generator.folly.svg": [
+		"circuit",
+		"generator",
+		"component",
+		"power",
+		"electrical",
+		"source"
+	],
+	"fet_n_channel.folly.svg": [
+		"circuit",
+		"fet",
+		"mosfet",
+		"n-channel",
+		"transistor",
+		"semiconductor",
+		"component",
+		"electrical"
+	],
+	"mortor.folly.svg": [
+		"circuit",
+		"motor",
+		"component",
+		"electrical",
+		"load"
+	],
+	"register.folly.svg": [
+		"circuit",
+		"resistor",
+		"component",
+		"resistance",
+		"electrical"
+	],
+	"variable_register.folly.svg": [
+		"circuit",
+		"variable resistor",
+		"potentiometer",
+		"rheostat",
+		"component",
+		"electrical"
+	],
+	"transistor_npn.folly.svg": [
+		"circuit",
+		"transistor",
+		"npn",
+		"semiconductor",
+		"component",
+		"electrical"
+	],
+	"inductor.folly.svg": [
+		"circuit",
+		"inductor",
+		"coil",
+		"electromagnetic",
+		"component",
+		"electrical"
+	],
+	"label_arrow_l.folly.svg": [
+		"note",
+		"label",
+		"arrow",
+		"current",
+		"ampere"
+	],
+	"label_arrow_r.folly.svg": [
+		"note",
+		"label",
+		"arrow",
+		"current",
+		"ampere"
+	],
+	"label_curve_r.folly.svg": [
+		"note",
+		"label",
+		"arrow",
+		"curve",
+		"voltage"
+	],
+	"label_curve_l.folly.svg": [
+		"note",
+		"label",
+		"arrow",
+		"curve",
+		"voltage"
+	],
+	"voltmeter.folly.svg": [
+		"circuit",
+		"voltmeter",
+		"meter",
+		"voltage",
+		"measurement",
+		"electrical"
+	],
+	"wattmeter_1.folly.svg": [
+		"circuit",
+		"wattmeter",
+		"meter",
+		"power",
+		"measurement",
+		"electrical"
+	],
+	"wattmeter_2.folly.svg": [
+		"circuit",
+		"wattmeter",
+		"meter",
+		"power",
+		"measurement",
+		"electrical"
+	],
+	"ammeter.folly.svg": [
+		"circuit",
+		"ammeter",
+		"meter",
+		"current",
+		"measurement",
+		"electrical"
+	],
+	"wattmeter_3.folly.svg": [
+		"circuit",
+		"wattmeter",
+		"meter",
+		"power",
+		"measurement",
+		"electrical"
+	],
+	"transforer_star_star.folly.svg": [
+		"circuit",
+		"transformer",
+		"star-star",
+		"wye-wye",
+		"three phase",
+		"electrical"
+	],
+	"transforer_star_delta.folly.svg": [
+		"circuit",
+		"transformer",
+		"star-delta",
+		"wye-delta",
+		"three phase",
+		"electrical"
+	],
+	"transforer_delta_delta.folly.svg": [
+		"circuit",
+		"transformer",
+		"delta-delta",
+		"three phase",
+		"electrical"
+	],
+	"transforer.folly.svg": [
+		"circuit",
+		"transformer",
+		"voltage",
+		"power",
+		"electrical"
+	],
+	"ct.folly.svg": [
+		"circuit",
+		"current transformer",
+		"ct",
+		"measurement",
+		"transformer",
+		"electrical"
+	],
+	"transforer_delta_star.folly.svg": [
+		"circuit",
+		"transformer",
+		"delta-star",
+		"delta-wye",
+		"three phase",
+		"electrical"
+	],
+	"circuit_breaker.folly.svg": [
+		"circuit",
+		"circuit breaker",
+		"breaker",
+		"protection",
+		"overcurrent",
+		"electrical"
+	],
+	"fuse.folly.svg": [
+		"circuit",
+		"fuse",
+		"protection",
+		"overcurrent",
+		"breaker",
+		"electrical"
+	],
+	"lbs_fuse.folly.svg": [
+		"circuit",
+		"load break switch",
+		"fuse",
+		"lbs",
+		"protection",
+		"electrical"
+	],
+	"ds.folly.svg": [
+		"circuit",
+		"disconnecting switch",
+		"ds",
+		"isolator",
+		"electrical"
+	],
+	"lbs.folly.svg": [
+		"circuit",
+		"load break switch",
+		"lbs",
+		"switch",
+		"disconnector",
+		"electrical"
+	],
+	"ds_fuse.folly.svg": [
+		"circuit",
+		"disconnecting switch",
+		"fuse",
+		"ds",
+		"protection",
+		"electrical"
+	],
+	"dc_motor_shunt.folly.svg": [
+		"circuit",
+		"dc motor",
+		"motor",
+		"shunt",
+		"shunt wound",
+		"dc machine",
+		"component",
+		"electrical",
+		"load"
+	],
+	"dc_generator_shunt.folly.svg": [
+		"circuit",
+		"dc generator",
+		"generator",
+		"shunt",
+		"shunt wound",
+		"dc machine",
+		"component",
+		"power",
+		"electrical",
+		"source"
+	],
+	"cell.folly.svg": [
+		"circuit",
+		"cell",
+		"battery",
+		"power supply",
+		"electrical",
+		"source"
+	],
+	"dc_supply.folly.svg": [
+		"circuit",
+		"power supply",
+		"dc",
+		"direct current",
+		"electrical",
+		"source"
+	],
+	"lamp.folly.svg": [
+		"circuit",
+		"lamp",
+		"light",
+		"bulb",
+		"electrical",
+		"load"
+	],
+	"ac_supply.folly.svg": [
+		"circuit",
+		"power supply",
+		"ac",
+		"alternating current",
+		"electrical",
+		"source"
+	],
+	"current_supply.folly.svg": [
+		"circuit",
+		"power supply",
+		"current source",
+		"electrical",
+		"source"
+	],
+	"earth.folly.svg": [
+		"circuit",
+		"earth",
+		"ground",
+		"electrical",
+		"reference"
+	],
+	"three_phase_supply.folly.svg": [
+		"circuit",
+		"power supply",
+		"three phase",
+		"ac",
+		"electrical",
+		"source"
+	]
 }

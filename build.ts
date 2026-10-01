@@ -94,14 +94,14 @@ function updateMeta(dir: string, result: Result) {
   for (const key of current) {
     updated[key] = existing[key] ?? [];
   }
-  Deno.writeTextFileSync(`${dir}/meta.json`, JSON.stringify(updated, null, 2));
+  Deno.writeTextFileSync(`${dir}/meta.json`, JSON.stringify(updated, null, "\t"));
 }
 
 function buildIndex(dir: string, noMeta = false) {
   const changedFiles = getChangedFiles();
   const existing = loadExistingIndex(dir);
   const result = walkDir(dir, changedFiles, existing);
-  Deno.writeTextFileSync(`${dir}/index.json`, JSON.stringify(result));
+  Deno.writeTextFileSync(`${dir}/index.json`, JSON.stringify(result, null, "\t"));
   if (!noMeta) updateMeta(dir, result);
 }
 
